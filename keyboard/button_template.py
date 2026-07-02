@@ -1,6 +1,6 @@
 start_kb = [
     ("🛏️ Спальная мебель", "sleep_furniture"),
-    ("👩‍🍳 Куханная мебель", "citchen_furniture"),
+    ("👩‍🍳 Кухонная мебель", "kitchen_furniture"),
     ("🛋️ Мягкая мебель", "soft_furniture"),
     ("🪑 Столы и стулья", "tables_chairs"),
     ("🗄️ Тумбы и комоды", "cabinets_commodes"),
@@ -17,7 +17,7 @@ admin_kb = [
     ("🪑 Добавить мебель", "new_furniture"),
     ("🗑️ Удалить мебель", "remove_furniture"),
     ("📋 Список категорий", "list_categories_furniture"),
-    ("◀️ Назад", "back_to_main")
+    ("◀️ Назад", "back_to_main"),
 ]
 
 

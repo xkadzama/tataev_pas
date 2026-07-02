@@ -7,12 +7,12 @@ from aiogram.enums import ParseMode
 from aiogram.exceptions import TelegramBadRequest
 
 from settings.config import ConfigBot
-
+from handlers.user import user as user_router
 
 async def main():
 	bot = Bot(token=ConfigBot.API, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
 	dp = Dispatcher()
-
+	dp.include_routers(user_router)
 	await dp.start_polling(bot)
 
 
