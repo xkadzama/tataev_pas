@@ -7,7 +7,6 @@ from sqlalchemy.orm import relationship
 from .engine import Base
 
 
-
 class User(Base):
 	__tablename__ = 'users'
 
@@ -27,6 +26,7 @@ class Category(Base):
 	name = Column(String, nullable=False)
 	description = Column(String, nullable=True)
 	created_at = Column(DateTime, default=lambda: datetime.now())
+	type = Column(String, nullable=True)
 
 	def __repr__(self):
 		return f"<Category(id={self.id}, name={self.name})"
@@ -54,14 +54,3 @@ class FurniturePhoto(Base):
 	created_at = Column(DateTime, default=lambda: datetime.now())
 
 	furniture = relationship('Furniture', back_populates='photos')
-
-
-
-
-
-
-
-
-
-
-

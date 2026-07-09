@@ -3,7 +3,7 @@ from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncAttrs
 
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__name__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB_PATH = os.path.join(BASE_DIR, 'database', 'database.db')
 
 DATABASE_URL = f'sqlite+aiosqlite:///{DB_PATH}'

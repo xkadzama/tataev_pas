@@ -43,5 +43,3 @@ kitchen_subcategory_inline_kb = [
     ("📐 Угловая кухня", "corner_kitchen"),
     ("◀️ Назад", "back_to_main")
 ]
-
-

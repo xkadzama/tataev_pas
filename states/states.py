@@ -3,6 +3,7 @@ from aiogram.fsm.state import StatesGroup, State
 
 class NewCategoryStates(StatesGroup):
     name_category = State()
+    type_category = State()
     description_category = State()
 
 

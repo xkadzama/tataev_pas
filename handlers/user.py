@@ -2,8 +2,8 @@ from aiogram import Router
 from aiogram.types import Message
 from aiogram.filters import CommandStart
 
-from keyboard.button_template import admin_kb, start_kb
-from keyboard.keyboard_builder import make_row_inline_keyboards
+from keyboards.button_template import admin_kb, start_kb
+from keyboards.keyboard_builder import make_row_inline_keyboards
 
 
 user = Router()
