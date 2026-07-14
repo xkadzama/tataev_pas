@@ -39,7 +39,7 @@ async def start_add_category(callback: CallbackQuery, state: FSMContext):
 @router.message(NewCategoryStates.name_category)
 async def process_category_name(message: Message, state: FSMContext):
     category_name = message.text.strip()
-
+    print(category_name)
     if len(category_name) < 2:
         await message.answer(
             "❌ Название слишком короткое. Минимум 2 символа.\n"
@@ -51,6 +51,7 @@ async def process_category_name(message: Message, state: FSMContext):
         from sqlalchemy import select
         query = select(Category).where(Category.name == category_name)
         result = await session.execute(query)
+        print(result)
         existing = result.scalar_one_or_none()
 
         if existing:
